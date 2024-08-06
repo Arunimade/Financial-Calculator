@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Financial Calculator</h1>
+        <div class="form-group">
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal">
+        </div>
+        <div class="form-group">
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" id="rate">
+        </div>
+        <div class="form-group">
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years">
+        </div>
+        <div class="form-group">
+            <label for="type">Calculation Type:</label>
+            <select id="type">
+                <option value="loan">Loan Payment</option>
+                <option value="interest">Interest Rate</option>
+                <option value="annuity">Annuity</option>
+            </select>
+        </div>
+        <button onclick="calculate()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
