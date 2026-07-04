@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+  <h1>💰 Financial Calculator</h1>
+  <p class="subtitle">Loans, annuities & interest — instantly</p>
+
+  <div class="form-group">
+    <label for="type">Calculation Type</label>
+    <select id="type">
+      <option value="loan">Loan Payment (Monthly)</option>
+      <option value="annuity">Annuity Payment (Monthly)</option>
+      <option value="simple">Simple Interest</option>
+      <option value="compound">Compound Interest</option>
+      <option value="future">Future Value of Investment</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="principal">Principal Amount <span class="hint">₹ / $</span></label>
+    <input type="number" id="principal" placeholder="e.g. 100000" min="0" step="any">
+  </div>
+
+  <div class="form-group">
+    <label for="rate">Annual Interest Rate <span class="hint">%</span></label>
+    <input type="number" id="rate" placeholder="e.g. 7.5" min="0" step="any">
+  </div>
+
+  <div class="form-group">
+    <label for="years">Number of Years</label>
+    <input type="number" id="years" placeholder="e.g. 5" min="0" step="any">
+  </div>
+
+  <div class="form-group compound-row" id="compoundRow">
+    <label for="freq">Compounding Frequency</label>
+    <select id="freq">
+      <option value="1">Annually</option>
+      <option value="2">Semi-Annually</option>
+      <option value="4">Quarterly</option>
+      <option value="12" selected>Monthly</option>
+      <option value="365">Daily</option>
+    </select>
+  </div>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div class="error-banner" id="errorBanner"></div>
+
+  <div class="result" id="resultBox">
+    <div class="result-inner">
+      <div class="result-label" id="resultLabel">Result</div>
+      <div class="result-value" id="resultValue">—</div>
+      <div class="result-details" id="resultDetails"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
